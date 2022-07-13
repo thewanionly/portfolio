@@ -33,7 +33,14 @@
     line-height: 2.5rem;
   }
 
+  &__cta-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
   &__cta-btn {
     max-width: 100%;
+    flex-basis: 100%;
   }
 }

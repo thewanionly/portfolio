@@ -5,6 +5,7 @@
 
   &__container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     padding-bottom: 3rem;
@@ -12,10 +13,53 @@
 }
 
 .nav {
-  justify-self: flex-end;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+  user-select: none;
+
+  &__toggle {
+    cursor: pointer;
+    color: $color-white;
+    height: 1.6rem;
+
+    &:focus,
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &-icon {
+      width: 50%;
+      position: relative;
+    }
+
+    &-icon,
+    &-icon::before,
+    &-icon::after {
+      display: block;
+
+      width: 1.6rem;
+      height: 0.3rem;
+      background: $color-white;
+    }
+
+    &-icon::before,
+    &-icon::after {
+      content: '';
+      width: 100%;
+    }
+
+    &-icon::before {
+      transform: translateY(0.6rem);
+    }
+
+    &-icon::after {
+      transform: translateY(0.9rem);
+    }
+  }
+
   &__list {
     display: flex;
-    gap: 2em;
   }
 
   &__link {
@@ -25,5 +69,26 @@
     &:hover {
       color: $color-secondary;
     }
+  }
+}
+
+.nav__menu {
+  visibility: visible;
+
+  opacity: 1;
+  position: absolute;
+  top: 7.5rem;
+  left: 0;
+  background-color: $color-primary;
+  padding: 8rem;
+  width: 100vw;
+  height: calc(100vh - 7.5rem);
+  z-index: 1;
+  text-align: center;
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
   }
 }

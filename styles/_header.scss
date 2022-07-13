@@ -1,0 +1,29 @@
+.header {
+  background-color: $color-primary;
+  padding-top: 3rem;
+  border-bottom: 0.1rem solid rgba($color-white, 0.1);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 3rem;
+  }
+}
+
+.nav {
+  justify-self: flex-end;
+  &__list {
+    display: flex;
+    gap: 2em;
+  }
+
+  &__link {
+    color: $color-white;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

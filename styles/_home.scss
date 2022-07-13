@@ -3,12 +3,12 @@
   color: $color-white;
   border-bottom-right-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
-  height: 95vh;
+  height: 80vh;
 
   display: flex;
   align-items: center;
 
-  &-container {
+  &__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;

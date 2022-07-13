@@ -56,6 +56,18 @@ button {
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.2rem;
+}
+
 .container {
   width: 75%;
   max-width: 120rem;

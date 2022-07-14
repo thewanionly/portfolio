@@ -45,6 +45,13 @@ h1 {
   line-height: 4rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
 p {
   font-size: $font-size-reg;
   font-weight: $font-weight-medium;
@@ -76,4 +83,8 @@ a {
 
 .highlight {
   color: $color-secondary;
+
+  &__invert {
+    color: $color-primary;
+  }
 }

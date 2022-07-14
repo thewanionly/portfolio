@@ -1,0 +1,17 @@
+.footer {
+  background-color: $color-primary;
+  padding: 4rem 0;
+  text-align: center;
+
+  &__description {
+    color: rgba($color-white, 0.5);
+    font-weight: $font-weight-medium;
+  }
+
+  &__copyright {
+    margin-top: 6rem;
+    color: rgba($color-white, 0.5);
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+  }
+}

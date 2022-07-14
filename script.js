@@ -1,7 +1,11 @@
 const navToggle = document.querySelector('#nav-toggle')
 const nav = document.querySelector('#nav')
+const footerCopyright = document.querySelector('#footer-copyright')
 
 navToggle.addEventListener('click', () => {
-  console.log('ass')
   nav.classList.toggle('nav__menu')
 })
+
+if (footerCopyright) {
+  footerCopyright.innerText = footerCopyright.innerText.replace('{year}', new Date().getFullYear())
+}

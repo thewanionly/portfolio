@@ -1,0 +1,28 @@
+.about {
+  padding: 4rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__card {
+    padding: 2.5rem 2rem;
+    background-color: $color-section-bg;
+    border-radius: 0.8rem;
+    text-align: center;
+
+    &-title {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: 3rem;
+    }
+
+    &-description {
+      color: rgba($color-black, 0.75);
+      line-height: 2.5rem;
+    }
+  }
+}

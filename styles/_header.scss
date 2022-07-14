@@ -15,51 +15,11 @@
 .nav {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s ease-out;
   user-select: none;
 
-  &__toggle {
-    cursor: pointer;
-    color: $color-white;
-    height: 1.6rem;
-
-    &:focus,
-    &:hover {
-      opacity: 0.75;
-    }
-
-    &-icon {
-      width: 50%;
-      position: relative;
-    }
-
-    &-icon,
-    &-icon::before,
-    &-icon::after {
-      display: block;
-
-      width: 1.6rem;
-      height: 0.3rem;
-      background: $color-white;
-    }
-
-    &-icon::before,
-    &-icon::after {
-      content: '';
-      width: 100%;
-    }
-
-    &-icon::before {
-      transform: translateY(0.6rem);
-    }
-
-    &-icon::after {
-      transform: translateY(0.9rem);
-    }
-  }
-
   &__list {
-    display: flex;
+    display: none;
   }
 
   &__link {
@@ -74,14 +34,14 @@
 
 .nav__menu {
   visibility: visible;
-
   opacity: 1;
+
   position: absolute;
   top: 7.5rem;
   left: 0;
-  background-color: $color-primary;
+  background-color: rgba($color-primary, 0.95);
   padding: 8rem;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 7.5rem);
   z-index: 1;
   text-align: center;
@@ -90,5 +50,58 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
+  }
+}
+
+.nav__toggle {
+  cursor: pointer;
+  color: $color-white;
+  width: 2.4rem;
+  padding: 1rem 0;
+  overflow: hidden;
+
+  &:focus,
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &-icon {
+    position: relative;
+  }
+
+  &-icon,
+  &-icon::before,
+  &-icon::after {
+    display: block;
+    background: $color-white;
+    content: '';
+    height: 0.2rem;
+    width: 2.4rem;
+    position: absolute;
+    transition: all 0.2s ease-out;
+  }
+
+  &-icon::before {
+    top: -5px;
+  }
+
+  &-icon::after {
+    top: 5px;
+  }
+
+  &--close {
+    .nav__toggle-icon {
+      background: transparent;
+    }
+
+    .nav__toggle-icon::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    .nav__toggle-icon::after {
+      transform: rotate(45deg);
+      top: 0;
+    }
   }
 }

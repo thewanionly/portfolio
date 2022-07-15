@@ -1,4 +1,6 @@
 .header {
+  position: fixed;
+  width: 100%;
   background-color: $color-primary;
   padding-top: 3rem;
   border-bottom: 0.1rem solid rgba($color-white, 0.1);

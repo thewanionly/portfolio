@@ -1,9 +1,7 @@
 .home {
   background-color: $color-primary;
   color: $color-white;
-  border-bottom-right-radius: 0.8rem;
-  border-bottom-left-radius: 0.8rem;
-  height: 80vh;
+  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -24,12 +22,13 @@
     &--secondary {
       letter-spacing: 0.5rem;
       font-size: $font-size-sm;
-      opacity: 0.5;
+
+      color: rgba($color-white, 0.5);
     }
   }
 
   &__subtitle {
-    opacity: 0.75;
+    color: rgba($color-white, 0.75);
     line-height: 2.5rem;
   }
 

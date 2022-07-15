@@ -20,16 +20,7 @@ const toggleNavMenu = () => {
 navToggle.addEventListener('click', toggleNavMenu)
 
 // Close nav menu and reset body overflow when clicking the nav link
-navLinks.forEach((link) => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault()
-
-    toggleNavMenu()
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    })
-  })
-})
+navLinks.forEach((link) => link.addEventListener('click', toggleNavMenu))
 
 // Footer copyright
 if (footerCopyright) {

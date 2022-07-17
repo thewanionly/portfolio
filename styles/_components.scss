@@ -40,3 +40,29 @@
     }
   }
 }
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__label {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+    text-align: start;
+  }
+
+  &__field {
+    outline: none;
+    border-radius: 0.8rem;
+    background-color: $color-white;
+    border: 0.1rem solid $color-grey-dark;
+    padding: 1.8rem 2.3rem;
+    resize: none;
+
+    &:focus-visible {
+      border-color: $color-secondary;
+      border: 0.1rem solid $color-secondary;
+    }
+  }
+}

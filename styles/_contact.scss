@@ -1,0 +1,21 @@
+.contact {
+  padding: 4rem 0;
+  background-color: $color-white;
+  text-align: center;
+
+  &__description {
+    margin-top: 2.5rem;
+    color: rgba($color-black, 0.5);
+  }
+
+  &__form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__alternative {
+    margin-top: 3rem;
+  }
+}

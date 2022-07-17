@@ -2,7 +2,7 @@
 $color-primary: #0e0e0e;
 $color-secondary: #d87d4a;
 $color-secondary-light: #fbaf85;
-$color-section-bg: #f1f1f1;
+$color-grey: #f1f1f1;
 $color-white: #fff;
 $color-black: #000;
 
@@ -78,6 +78,7 @@ a {
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
   letter-spacing: 0.2rem;
+  color: unset;
 }
 
 .container {

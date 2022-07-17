@@ -27,4 +27,15 @@
       }
     }
   }
+
+  &__secondary {
+    background-color: transparent;
+    border: 0.1rem solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
 }

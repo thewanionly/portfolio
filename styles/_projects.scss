@@ -1,0 +1,19 @@
+.projects {
+  background-color: $color-grey;
+  padding: 4rem 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__block {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: $color-white;
+    border-radius: 0.8rem;
+  }
+}

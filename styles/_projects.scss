@@ -9,11 +9,53 @@
   }
 
   &__block {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    overflow: hidden;
     background-color: $color-white;
     border-radius: 0.8rem;
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__tags {
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+  }
+
+  &__tag-item {
+    padding: 0.5rem 1rem;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 0.5rem;
+    font-size: $font-size-xs;
+  }
+
+  &__description {
+    color: rgba($color-black, 0.5);
+    margin-bottom: 3rem;
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }

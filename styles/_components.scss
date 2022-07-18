@@ -1,11 +1,12 @@
 .button {
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2.5rem;
   max-width: max-content;
 
   text-transform: uppercase;
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
   letter-spacing: 0.1rem;
+  line-height: 1.8rem;
   text-align: center;
 
   transition: all 0.2s;
@@ -38,6 +39,26 @@
       background-color: $color-primary;
       color: $color-white;
     }
+  }
+
+  &__tertiary {
+    background-color: transparent;
+    padding: 0;
+    color: rgba($color-black, 0.5);
+
+    &::after {
+      content: '  >';
+      color: $color-secondary;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &.full-width {
+    max-width: 100%;
+    flex-basis: 100%;
   }
 }
 

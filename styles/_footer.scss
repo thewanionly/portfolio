@@ -3,13 +3,25 @@
   padding: 4rem 0;
   text-align: center;
 
+  &__nav {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 5rem;
+
+    .nav__list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  }
+
   &__description {
     color: rgba($color-white, 0.5);
     font-weight: $font-weight-medium;
+    margin-bottom: 6rem;
   }
 
   &__copyright {
-    margin-top: 6rem;
     color: rgba($color-white, 0.5);
     font-weight: $font-weight-bold;
     font-size: $font-size-sm;

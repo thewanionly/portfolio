@@ -3,6 +3,7 @@
   padding: 4rem 0;
 
   &__list {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -57,5 +58,24 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  &__message {
+    margin-top: 4rem;
+    text-align: center;
+    color: rgba($color-black, 0.5);
+  }
+
+  &__github-link {
+    text-transform: unset;
+    text-decoration: unset;
+    letter-spacing: 0;
+    font-size: $font-size-reg;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

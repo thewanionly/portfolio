@@ -91,6 +91,12 @@ a {
   margin: 0 auto;
 }
 
+.section {
+  &__title {
+    text-align: center;
+  }
+}
+
 .highlight {
   color: $color-secondary;
 

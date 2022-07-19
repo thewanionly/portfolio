@@ -2,6 +2,17 @@
   background-color: $color-primary;
   padding: 4rem 0;
   text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 5rem);
+    background-color: #d87d4a;
+    height: 0.4rem;
+    width: 10rem;
+  }
 
   &__nav {
     visibility: visible;

@@ -1,7 +1,11 @@
 .contact {
   padding: 4rem 0;
   background-color: $color-white;
-  text-align: center;
+  text-align: left;
+
+  &__section-title {
+    text-align: left;
+  }
 
   &__description {
     margin-top: 2.5rem;

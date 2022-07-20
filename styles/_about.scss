@@ -20,6 +20,11 @@
       color: $color-secondary;
     }
 
+    &-image {
+      width: 80%;
+      margin: 0 auto 0.8rem;
+    }
+
     &-description {
       color: rgba($color-black, 0.75);
       line-height: 2.5rem;

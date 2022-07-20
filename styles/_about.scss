@@ -25,22 +25,3 @@
     }
   }
 }
-
-.skills {
-  padding: 2.5rem 2rem;
-  background-color: $color-secondary;
-  border-radius: 0.8rem;
-  text-align: center;
-
-  &__title {
-    color: $color-white;
-    letter-spacing: 0.15rem;
-    font-weight: $font-weight-bold;
-    margin-bottom: 3rem;
-  }
-
-  &__description {
-    color: rgba($color-white, 0.75);
-    line-height: 2.5rem;
-  }
-}

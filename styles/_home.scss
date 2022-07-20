@@ -51,4 +51,10 @@
     justify-content: center;
     gap: 2rem;
   }
+
+  &__social-link {
+    &:hover {
+      color: $color-secondary;
+    }
+  }
 }

@@ -1,6 +1,10 @@
 .projects {
-  background-color: $color-grey;
+  background-color: $color-secondary;
   padding: 4rem 0;
+
+  &__section-title {
+    color: $color-white;
+  }
 
   &__list {
     margin-top: 4rem;
@@ -13,6 +17,7 @@
     overflow: hidden;
     background-color: $color-white;
     border-radius: 0.8rem;
+    box-shadow: 0 0.3rem 1.5rem rgba($color-black, 0.2);
   }
 
   &__img {
@@ -37,9 +42,9 @@
   }
 
   &__tag-item {
-    padding: 0.5rem 1rem;
-    background-color: $color-secondary;
-    color: $color-white;
+    padding: 0.3rem 0.75rem;
+    color: $color-secondary;
+    border: 0.1rem solid $color-secondary;
     border-radius: 0.5rem;
     font-size: $font-size-xs;
   }
@@ -58,19 +63,10 @@
   &__message {
     margin-top: 4rem;
     text-align: center;
-    color: rgba($color-black, 0.5);
+    color: rgba($color-white, 0.75);
   }
 
   &__github-link {
-    text-transform: unset;
-    text-decoration: unset;
-    letter-spacing: 0;
-    font-size: $font-size-reg;
-    font-weight: $font-weight-bold;
-    color: $color-secondary;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    color: rgba($color-black, 0.75);
   }
 }

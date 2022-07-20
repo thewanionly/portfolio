@@ -1,7 +1,8 @@
 .home {
+  padding: 4rem 0;
   background-color: $color-primary;
   color: $color-white;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    margin-top: 7rem;
+    margin-top: 6rem;
     text-align: center;
   }
 
@@ -43,5 +44,11 @@
   &__cta-btn {
     max-width: 100%;
     flex-basis: 100%;
+  }
+
+  &__social-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
 }

@@ -96,3 +96,41 @@
     }
   }
 }
+
+.toast {
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  width: 100%;
+  min-height: 8.1rem;
+  background-color: $color-grey-dark;
+  box-shadow: 0 0.3rem 1.5rem rgba($color-black, 0.2);
+  padding: 2.5rem;
+  padding-right: 2.7rem;
+  cursor: pointer;
+  color: rgba($color-white, 0.75);
+  line-height: 2.5rem;
+  transition: visiblity 0.2s ease-in;
+
+  &--visible {
+    visibility: visible;
+  }
+
+  &--success {
+    background-color: $color-secondary;
+  }
+
+  &--error {
+    background-color: $color-error;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+}

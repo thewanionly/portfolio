@@ -297,37 +297,48 @@
           Send me a message if you got questions or if you are interested in my skills and services
           or if you would just like to say hello.
         </p>
-        <form class="contact__form">
+        <form id="contact-form" class="contact__form">
           <div class="contact__input form-input">
-            <label class="contact__input-label form-input__label">Name</label>
+            <label class="contact__input-label form-input__label">Name *</label>
             <input
               class="contact__input-field form-input__field"
+              name="name"
+              type="text"
               placeholder="Enter your name..."
+              required
             />
           </div>
           <div class="contact__input form-input">
-            <label class="contact__input-label form-input__label">E-mail</label>
+            <label class="contact__input-label form-input__label">E-mail *</label>
             <input
               class="contact__input-field form-input__field"
+              name="email"
+              type="email"
               placeholder="Enter your e-mail address..."
+              required
             />
           </div>
           <div class="contact__input form-input">
-            <label class="contact__input-label form-input__label">Subject</label>
+            <label class="contact__input-label form-input__label">Subject *</label>
             <input
               class="contact__input-field form-input__field"
+              name="subject"
+              type="text"
               placeholder="Enter the message subject..."
+              required
             />
           </div>
           <div class="contact__input form-input">
-            <label class="contact__input-label form-input__label">Message</label>
+            <label class="contact__input-label form-input__label">Message *</label>
             <textarea
               class="contact__input-field form-input__field"
               placeholder="Enter your message..."
+              name="message"
               rows="10"
+              required
             ></textarea>
           </div>
-          <button class="button button__primary full-width">Send message</button>
+          <button type="submit" class="button button__primary full-width">Send message</button>
         </form>
       </div>
     </section>

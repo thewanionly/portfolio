@@ -3,6 +3,7 @@ const navToggle = document.querySelector('#nav-toggle')
 const nav = document.querySelector('#nav')
 const navLinks = document.querySelectorAll('#nav-link')
 const footerCopyright = document.querySelector('#footer-copyright')
+const contactForm = document.querySelector('#contact-form')
 
 // Nav toggle click handler
 const toggleNavMenu = () => {
@@ -27,6 +28,44 @@ navLinks.forEach((link) =>
     }
   })
 )
+
+// Submit action
+contactForm.addEventListener('submit', async (e) => {
+  // Prevent page reload after submitting form
+  e.preventDefault()
+
+  // Get form data
+  const formData = new FormData(e.target)
+
+  // Send message
+  try {
+    const res = await fetch('https://formspree.io/f/xpzbvlvq', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+
+    if (res.ok) {
+      alert(
+        'Your message have been sent. Thank you for your interest. I will get back to you as soon as possible'
+      )
+      contactForm.reset()
+    } else {
+      res.json().then((data) => {
+        if (Object.hasOwn(data, 'errors')) {
+          throw new Error(data['errors'].map((error) => error['message']).join(', '))
+        } else {
+          throw new Error('Oops! There was a problem submitting your form')
+        }
+      })
+    }
+  } catch (error) {
+    alert(error)
+    console.error(error)
+  }
+})
 
 // Footer copyright
 if (footerCopyright) {

@@ -59,12 +59,14 @@ contactForm.addEventListener('submit', async (e) => {
     const resData = await res.json()
 
     // After request was done
-    toast.classList.add('toast--visible')
+    toast.classList.remove('toast__exit')
+    toast.classList.add('toast--visible', 'toast__enter')
     submitButton.textContent = 'Send message'
     submitButton.disabled = false
 
     if (res.ok) {
       // Success
+      toast.classList.remove('toast--error')
       toast.classList.add('toast--success')
       toastMesssage.textContent =
         'Your message have been sent. I will get back to you as soon as possible. Thank you.'
@@ -86,6 +88,7 @@ contactForm.addEventListener('submit', async (e) => {
       errorMessage += ` ${error?.message}`
     }
 
+    toast.classList.remove('toast--success')
     toast.classList.add('toast--error')
     toastMesssage.textContent = errorMessage
     console.error(error)
@@ -94,7 +97,8 @@ contactForm.addEventListener('submit', async (e) => {
 
 // Toast close
 toastClose.addEventListener('click', () => {
-  toast.classList.remove('toast--visible')
+  toast.classList.add('toast__exit')
+  toast.classList.remove('toast__enter')
 })
 
 // Footer copyright

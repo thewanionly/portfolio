@@ -48,6 +48,7 @@ contactForm.addEventListener('submit', async (e) => {
     // Loading
     submitButton.textContent = 'Sending message...'
     submitButton.disabled = true
+    submitButton.style.cursor = 'wait'
 
     const res = await fetch('https://formspree.io/f/xpzbvlvq', {
       method: 'POST',
@@ -63,6 +64,7 @@ contactForm.addEventListener('submit', async (e) => {
     toast.classList.add('toast--visible', 'toast__enter')
     submitButton.textContent = 'Send message'
     submitButton.disabled = false
+    submitButton.style.cursor = 'pointer'
 
     if (res.ok) {
       // Success

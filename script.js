@@ -37,8 +37,15 @@ contactForm.addEventListener('submit', async (e) => {
   // Get form data
   const formData = new FormData(e.target)
 
+  // Get button text
+  const submitButton = document.querySelector('#contact-form-button')
+
   // Send message
   try {
+    // Loading
+    submitButton.textContent = 'Sending message...'
+    submitButton.disabled = true
+
     const res = await fetch('https://formspree.io/f/xpzbvlvq', {
       method: 'POST',
       body: formData,
@@ -47,7 +54,13 @@ contactForm.addEventListener('submit', async (e) => {
       }
     })
 
+    // After request was done
+    submitButton.textContent = 'Send message'
+    submitButton.disabled = false
+
     if (res.ok) {
+      // Success
+
       alert(
         'Your message have been sent. Thank you for your interest. I will get back to you as soon as possible'
       )
@@ -62,6 +75,7 @@ contactForm.addEventListener('submit', async (e) => {
       })
     }
   } catch (error) {
+    //Error
     alert(error)
     console.error(error)
   }

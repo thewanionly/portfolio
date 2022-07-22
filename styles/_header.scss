@@ -65,7 +65,11 @@
 
   &:focus,
   &:hover {
-    opacity: 0.75;
+    .nav__toggle-icon,
+    .nav__toggle-icon::before,
+    .nav__toggle-icon::after {
+      background: $color-secondary;
+    }
   }
 
   &-icon {
@@ -95,6 +99,11 @@
   &--close {
     .nav__toggle-icon {
       background: transparent;
+
+      &:focus,
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     .nav__toggle-icon::before {

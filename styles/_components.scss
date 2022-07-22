@@ -110,7 +110,7 @@
   background-color: $color-grey-dark;
   box-shadow: 0 0.3rem 1.5rem rgba($color-black, 0.2);
   padding: 2.5rem;
-  padding-right: 2.7rem;
+  padding-right: 4.6rem;
   color: $color-white;
   line-height: 2.5rem;
   animation-fill-mode: both;
@@ -128,11 +128,27 @@
     background-color: $color-error;
   }
 
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__info-icon {
+    flex-shrink: 0;
+  }
+
   &__close {
     position: absolute;
-    top: 1rem;
-    right: 1.5rem;
+    top: 1.5rem;
+    right: 1.7rem;
     cursor: pointer;
+    color: rgba($color-white, 0.7);
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   &__enter {

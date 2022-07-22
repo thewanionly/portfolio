@@ -15,8 +15,21 @@
   </head>
   <body>
     <div id="toast" class="toast toast--success">
-      <span id="toast-message" class="toast__message"></span>
-      <span id="toast-close" class="toast__close">X</span>
+      <div class="toast__content">
+        <span class="toast__info-icon">
+          <svg class="icon">
+            <use xlink:href="/assets/icons/info.svg#img"></use>
+          </svg>
+        </span>
+        <span id="toast-message" class="toast__message">
+          Your message have been sent. I will get back to you as soon as possible. Thank you.
+        </span>
+      </div>
+      <span id="toast-close" class="toast__close">
+        <svg class="icon">
+          <use xlink:href="/assets/icons/close.svg#img"></use>
+        </svg>
+      </span>
     </div>
     <header class="header">
       <div class="container header__container">

@@ -68,7 +68,11 @@
     .nav__toggle-icon,
     .nav__toggle-icon::before,
     .nav__toggle-icon::after {
-      background: $color-secondary;
+      background-color: $color-secondary;
+    }
+
+    &.nav__toggle--close .nav__toggle-icon {
+      background-color: transparent;
     }
   }
 
@@ -98,7 +102,7 @@
 
   &--close {
     .nav__toggle-icon {
-      background: transparent;
+      background-color: transparent;
 
       &:focus,
       &:hover {

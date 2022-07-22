@@ -138,6 +138,10 @@
 }
 
 @media only screen and (min-width: $desktop-breakpoint) {
+  body {
+    overflow: unset !important;
+  }
+
   .header {
     &__container {
       justify-content: space-between;
@@ -156,5 +160,10 @@
 
   .nav__toggle {
     display: none;
+  }
+
+  .nav__menu {
+    visibility: hidden;
+    opacity: 0;
   }
 }

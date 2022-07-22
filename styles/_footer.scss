@@ -32,11 +32,17 @@
     margin-bottom: 6rem;
   }
 
+  &__bottom-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
   &__copyright {
     color: rgba($color-white, 0.5);
     font-weight: $font-weight-bold;
     font-size: $font-size-sm;
-    margin-bottom: 3rem;
   }
 
   &__social-group {
@@ -49,6 +55,28 @@
   &__social-link {
     &:hover {
       color: $color-secondary;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .footer {
+    text-align: start;
+
+    &::before {
+      left: 12.5%;
+    }
+
+    &__nav {
+      .nav__list {
+        flex-direction: row;
+        gap: 3.4rem;
+      }
+    }
+
+    &__bottom-area {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 }

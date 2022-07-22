@@ -9,9 +9,12 @@
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     padding-bottom: 3rem;
+  }
+
+  &__logo {
+    margin: 0 auto;
   }
 }
 

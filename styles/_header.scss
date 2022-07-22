@@ -124,3 +124,37 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .header {
+    &__container {
+      gap: 4.2rem;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) {
+  .header {
+    &__container {
+      justify-content: space-between;
+    }
+  }
+
+  .nav {
+    visibility: visible;
+    opacity: 1;
+
+    &__list {
+      display: flex;
+      gap: 3.4rem;
+    }
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}

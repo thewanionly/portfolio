@@ -25,6 +25,9 @@ $font-weight-reg: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
+$tablet-breakpoint: 48em; // 768 / 16 (rem can't be used in media queries)
+$desktop-breakpoint: 90em; // 1440 / 16 (rem can't be used in media queries)
+
 *,
 *::before,
 *::after {
@@ -36,7 +39,15 @@ $font-weight-bold: 700;
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
+  font-size: 50%; //1rem = 8px 8px/16px = 50%
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    font-size: 56.25%; //1rem = 9px 9px/16px = 56.25%
+  }
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
+  }
 }
 
 body,

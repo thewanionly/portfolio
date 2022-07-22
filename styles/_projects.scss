@@ -1,13 +1,9 @@
 .projects {
-  background-color: $color-secondary;
+  background-color: $color-grey;
   padding: 4rem 0;
 
   &__container {
     position: relative;
-  }
-
-  &__section-title {
-    color: $color-white;
   }
 
   &__list {
@@ -35,13 +31,13 @@
   }
 
   &__title {
-    color: $color-white;
+    color: $color-black;
     letter-spacing: 0.15rem;
     margin-bottom: 4rem;
   }
 
   &__description {
-    color: rgba($color-white, 0.75);
+    color: rgba($color-black, 0.5);
     line-height: 2.5rem;
     margin-bottom: 1.75rem;
   }
@@ -53,13 +49,13 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   &__tag-item {
     padding: 0.3rem 0.75rem;
-    color: rgba($color-white, 0.75);
-    border: 0.1rem solid rgba($color-white, 0.75);
+    color: rgba($color-black, 0.5);
+    border: 0.1rem solid rgba($color-black, 0.5);
     border-radius: 0.5rem;
     font-size: $font-size-xs;
   }
@@ -73,7 +69,7 @@
   &__message {
     margin-top: 4rem;
     text-align: center;
-    color: rgba($color-white, 0.75);
+    color: rgba($color-black, 0.5);
   }
 
   &__nav-btn {

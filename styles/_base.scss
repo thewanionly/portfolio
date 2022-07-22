@@ -138,8 +138,8 @@ a {
     text-decoration: underline;
   }
 
-  &--dark {
-    color: $color-black;
+  &--black {
+    color: rgba($color-black, 0.5);
   }
 
   &--white {

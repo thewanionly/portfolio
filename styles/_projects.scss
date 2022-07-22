@@ -2,6 +2,10 @@
   background-color: $color-secondary;
   padding: 4rem 0;
 
+  &__container {
+    position: relative;
+  }
+
   &__section-title {
     color: $color-white;
   }
@@ -23,7 +27,7 @@
     height: 20rem;
     display: flex;
     box-shadow: 0 0.3rem 1.5rem rgba($color-black, 0.2);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     img {
       object-fit: cover;
@@ -70,5 +74,37 @@
     margin-top: 4rem;
     text-align: center;
     color: rgba($color-white, 0.75);
+  }
+
+  &__nav-btn {
+    visibility: hidden;
+    position: absolute;
+    top: 29rem;
+
+    padding: 1rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: rgba($color-primary, 0.6);
+    color: rgba($color-white, 0.6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
+    &--prev {
+      left: -4rem;
+    }
+
+    &--next {
+      right: -4rem;
+    }
   }
 }

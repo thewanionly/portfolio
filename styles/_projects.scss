@@ -19,6 +19,9 @@
   &__block {
     overflow: hidden;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   &__img {
@@ -56,20 +59,27 @@
 
   &__tag-item {
     padding: 0.3rem 0.75rem;
-    color: rgba($color-black, 0.5);
-    border: 0.1rem solid rgba($color-black, 0.5);
+    color: rgba($color-black, 1);
+    border: 0.1rem solid rgba($color-black, 1);
     border-radius: 0.5rem;
     font-size: $font-size-xs;
   }
 
-  &__cta {
+  &__cta-btn-group {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
   }
 
+  &__cta-btn {
+    flex: 1;
+    flex-basis: 45%;
+    max-width: 100%;
+    min-width: 29rem;
+  }
+
   &__message {
-    margin-top: 4rem;
+    margin-top: 7rem;
     text-align: center;
     color: rgba($color-black, 0.5);
   }
@@ -103,6 +113,32 @@
 
     &--next {
       right: -4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .projects {
+    &__block {
+      flex-direction: row;
+      gap: 7%;
+    }
+
+    &__img {
+      flex-basis: 43%;
+    }
+
+    &__details {
+      text-align: start;
+      flex-basis: 50%;
+    }
+
+    &__tags {
+      justify-content: flex-start;
+    }
+
+    &__cta-btn {
+      min-width: 20rem;
     }
   }
 }

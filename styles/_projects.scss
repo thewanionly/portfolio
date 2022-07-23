@@ -2,12 +2,15 @@
   background-color: $color-grey;
   padding: 4rem 0;
 
+  &__title {
+    margin-bottom: 7rem;
+  }
+
   &__container {
     position: relative;
   }
 
   &__list {
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -29,7 +32,7 @@
     }
   }
 
-  &__title {
+  &__item-title {
     color: $color-black;
     letter-spacing: 0.15rem;
     margin-bottom: 4rem;

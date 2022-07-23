@@ -1,10 +1,8 @@
 .about {
   padding: 4rem 0;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+  &__title {
+    margin-bottom: 7rem;
   }
 
   &__content {

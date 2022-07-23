@@ -38,12 +38,15 @@
   &__cta-btn-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2rem;
   }
 
   &__cta-btn {
+    flex: 1;
+    flex-basis: 45%;
     max-width: 100%;
-    flex-basis: 100%;
+    min-width: 29rem;
   }
 
   &__social-group {
@@ -55,6 +58,14 @@
   &__social-link {
     &:hover {
       color: $color-secondary;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .home {
+    &__cta-btn {
+      max-width: 35rem;
     }
   }
 }

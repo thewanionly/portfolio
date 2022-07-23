@@ -7,6 +7,8 @@ const contactForm = document.querySelector('#contact-form')
 const toast = document.querySelector('#toast')
 const toastMesssage = document.querySelector('#toast-message')
 const toastClose = document.querySelector('#toast-close')
+const toastIconInfo = document.querySelector('#toast-icon-info')
+const toastIconCheck = document.querySelector('#toast-icon-check')
 
 // Nav toggle click handler
 const toggleNavMenu = () => {
@@ -70,6 +72,8 @@ contactForm.addEventListener('submit', async (e) => {
       // Success
       toast.classList.remove('toast--error')
       toast.classList.add('toast--success')
+      toastIconCheck.style.display = 'flex'
+      toastIconInfo.style.display = 'none'
       toastMesssage.textContent =
         'Your message have been sent. I will get back to you as soon as possible. Thank you.'
       contactForm.reset()
@@ -90,6 +94,8 @@ contactForm.addEventListener('submit', async (e) => {
       errorMessage += ` ${error?.message}`
     }
 
+    toastIconInfo.style.display = 'flex'
+    toastIconCheck.style.display = 'none'
     toast.classList.remove('toast--success')
     toast.classList.add('toast--error')
     toastMesssage.textContent = errorMessage

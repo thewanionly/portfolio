@@ -8,8 +8,17 @@
     margin-bottom: 4rem;
   }
 
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+
   &__group {
-    margin-top: 5rem;
+    flex: 1;
+    min-width: 34rem;
+    max-width: 50rem;
   }
 
   &__description {
@@ -33,5 +42,15 @@
     gap: 1rem;
     flex-basis: 27%;
     color: rgba($color-white, 0.75);
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .skills {
+    &__group {
+      flex-basis: 30%;
+      min-width: 28rem;
+      max-width: 50%;
+    }
   }
 }

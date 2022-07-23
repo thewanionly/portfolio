@@ -7,7 +7,17 @@
     gap: 4rem;
   }
 
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
   &__card {
+    flex: 1;
+    min-width: 34rem;
+    max-width: 50rem;
     padding: 2.5rem 2rem;
     background-color: $color-grey;
     border-radius: 0.8rem;
@@ -21,13 +31,23 @@
     }
 
     &-image {
-      width: 80%;
+      width: 65%;
       margin: 0 auto 0.8rem;
     }
 
     &-description {
       color: rgba($color-black, 0.75);
       line-height: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .about {
+    &__card {
+      flex-basis: 32%;
+      min-width: 30rem;
+      max-width: 50%;
     }
   }
 }

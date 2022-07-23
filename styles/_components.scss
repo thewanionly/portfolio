@@ -139,11 +139,12 @@
   &__content {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   &__info-icon {
     flex-shrink: 0;
+    display: flex;
   }
 
   &__close {
@@ -165,6 +166,17 @@
 
   &__exit {
     animation-name: slideOutRight;
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .toast {
+    width: 37rem;
+    border-radius: 0.4rem;
+    top: 1rem;
+    right: 1rem;
+    padding: 1.7rem;
+    padding-right: 4.6rem;
   }
 }
 

@@ -1,25 +1,53 @@
 .contact {
   padding: 4rem 0;
   background-color: $color-white;
-  text-align: left;
+  text-align: center;
+
+  &__container {
+    max-width: 80rem;
+  }
 
   &__title {
-    text-align: left;
+    margin-bottom: 2.5rem;
   }
 
   &__description {
-    margin-top: 2.5rem;
+    max-width: 60rem;
+    margin: auto;
+    margin-bottom: 6rem;
     color: rgba($color-black, 0.5);
   }
 
   &__form {
     margin-top: 2.5rem;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    min-width: 29rem;
+  }
+
+  &__input {
+    flex: 1;
+    flex-basis: 100%;
   }
 
   &__alternative {
     margin-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .contact {
+    &__input {
+      &--name,
+      &--email {
+        flex-basis: 48%;
+      }
+    }
   }
 }

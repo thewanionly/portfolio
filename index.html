@@ -329,14 +329,14 @@
       </div>
     </section>
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="container contact__container">
         <h2 class="section__title contact__title">Contact me</h2>
         <p class="contact__description">
           Send me a message if you got questions or if you are interested in my skills and services
           or if you would just like to say hello.
         </p>
         <form id="contact-form" class="contact__form">
-          <div class="contact__input form-input">
+          <div class="contact__input contact__input--name form-input">
             <label class="contact__input-label form-input__label">Name *</label>
             <input
               class="contact__input-field form-input__field"
@@ -346,7 +346,7 @@
               required
             />
           </div>
-          <div class="contact__input form-input">
+          <div class="contact__input contact__input--email form-input">
             <label class="contact__input-label form-input__label">E-mail *</label>
             <input
               class="contact__input-field form-input__field"
@@ -356,7 +356,7 @@
               required
             />
           </div>
-          <div class="contact__input form-input">
+          <div class="contact__input contact__input--subject form-input">
             <label class="contact__input-label form-input__label">Subject *</label>
             <input
               class="contact__input-field form-input__field"
@@ -366,17 +366,21 @@
               required
             />
           </div>
-          <div class="contact__input form-input">
+          <div class="contact__input contact__input--message form-input">
             <label class="contact__input-label form-input__label">Message *</label>
             <textarea
               class="contact__input-field form-input__field"
               placeholder="Enter your message..."
               name="Message"
-              rows="10"
+              rows="15"
               required
             ></textarea>
           </div>
-          <button id="contact-form-button" type="submit" class="button button__primary full-width">
+          <button
+            id="contact-form-button"
+            type="submit"
+            class="contact__button button button__primary"
+          >
             Send message
           </button>
         </form>

@@ -17,7 +17,7 @@
     color: $color-white;
 
     &:hover {
-      background-color: $color-primary-light;
+      background-color: $color-primary-dark;
     }
 
     &--outline {
@@ -26,7 +26,7 @@
       color: $color-primary;
 
       &:hover {
-        background-color: rgba($color-primary-light, 0.1);
+        background-color: rgba($color-primary-dark, 0.1);
       }
     }
 

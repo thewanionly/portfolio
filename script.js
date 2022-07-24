@@ -2,6 +2,7 @@ const body = document.querySelector('body')
 const navToggle = document.querySelector('#nav-toggle')
 const nav = document.querySelector('#nav')
 const navLinks = document.querySelectorAll('#nav-link')
+const yearsOfExp = document.querySelector('#years-of-exp')
 const footerCopyright = document.querySelector('#footer-copyright')
 const contactForm = document.querySelector('#contact-form')
 const toast = document.querySelector('#toast')
@@ -9,6 +10,14 @@ const toastMesssage = document.querySelector('#toast-message')
 const toastClose = document.querySelector('#toast-close')
 const toastIconInfo = document.querySelector('#toast-icon-info')
 const toastIconCheck = document.querySelector('#toast-icon-check')
+
+// Started my ReactJS experience October 2018
+const START_YEAR = 2018
+const START_MONTH = 10
+
+// Other constants
+const NUM_OF_MONTHS_A_YEAR = 12
+const EXP_THRESHOLD = 8 / NUM_OF_MONTHS_A_YEAR
 
 // Nav toggle click handler
 const toggleNavMenu = () => {
@@ -108,6 +117,29 @@ toastClose.addEventListener('click', () => {
   toast.classList.add('toast__exit')
   toast.classList.remove('toast__enter')
 })
+
+// Years of experience text
+if (yearsOfExp) {
+  const yearNow = new Date().getFullYear()
+  const monthNow = new Date().getMonth() + 1 //need to add 1 since months in Date API is 0-based indexed
+
+  const monthDiff = monthNow - START_MONTH
+  const monthDiffDecimal = Math.abs(monthDiff) / NUM_OF_MONTHS_A_YEAR
+
+  let exactYearLength = yearNow - START_YEAR
+  exactYearLength =
+    monthDiff < 0 ? exactYearLength - monthDiffDecimal : exactYearLength + monthDiffDecimal
+
+  const yearLength = Math.trunc(exactYearLength)
+  const yearLengthExcess = exactYearLength % 1
+
+  const numOfYears =
+    yearLengthExcess === 0 || yearLengthExcess <= EXP_THRESHOLD ? yearLength : yearLength + 1
+  const adverb =
+    yearLengthExcess === 0 ? '' : yearLengthExcess <= EXP_THRESHOLD ? 'over ' : 'almost '
+
+  yearsOfExp.innerText = `${adverb}${numOfYears} years`
+}
 
 // Footer copyright
 if (footerCopyright) {

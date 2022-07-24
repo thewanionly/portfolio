@@ -29,9 +29,19 @@
       color: $color-primary;
     }
 
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
     &-image {
-      width: 65%;
-      margin: 0 auto 0.8rem;
+      height: 11rem;
+      margin: 0 auto 3rem;
+
+      img {
+        height: 100%;
+      }
     }
 
     &-description {

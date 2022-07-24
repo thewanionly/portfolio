@@ -1,11 +1,11 @@
 .skills {
-  padding: 4rem 0;
+  padding: 8rem 0;
   background-color: $color-primary;
   text-align: center;
 
   &__title {
     color: $color-white;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   &__content {
@@ -51,6 +51,14 @@
       flex-basis: 30%;
       min-width: 28rem;
       max-width: 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-landscape-breakpoint) {
+  .skills {
+    &__title {
+      margin-bottom: 10rem;
     }
   }
 }

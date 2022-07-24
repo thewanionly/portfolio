@@ -1,9 +1,9 @@
 .projects {
   background-color: $color-white;
-  padding: 4rem 0;
+  padding: 8rem 0;
 
   &__title {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   &__container {
@@ -146,6 +146,10 @@
 
 @media only screen and (min-width: $tablet-landscape-breakpoint) {
   .projects {
+    &__title {
+      margin-bottom: 10rem;
+    }
+
     &__block {
       flex-direction: row;
       align-items: flex-start;

@@ -3,15 +3,14 @@
   z-index: 1;
   width: 100%;
   background-color: $color-primary;
-  padding-top: 3rem;
   border-bottom: 0.1rem solid rgba($color-white, 0.1);
   height: 8.1rem;
+  display: flex;
+  align-items: center;
 
   &__container {
     display: flex;
     align-items: center;
-
-    padding-bottom: 3rem;
   }
 
   &__logo {

@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     left: calc(50% - 5rem);
-    background-color: #d87d4a;
+    background-color: $color-primary;
     height: 0.4rem;
     width: 10rem;
   }
@@ -71,7 +71,7 @@
     text-align: start;
 
     &::before {
-      left: 12.5%;
+      left: 10%;
     }
 
     &__nav {
@@ -97,6 +97,14 @@
     &__top-area {
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) {
+  .footer {
+    &::before {
+      left: 12.5%;
     }
   }
 }

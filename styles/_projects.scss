@@ -21,18 +21,25 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
   }
 
   &__img {
+    max-width: 55rem;
+    flex: 1;
     width: 100%;
     display: flex;
-    box-shadow: 0 0.3rem 1.5rem rgba($color-black, 0.2);
-    margin-bottom: 3rem;
+    align-items: flex-start;
 
     img {
-      object-fit: cover;
+      object-fit: contain;
     }
+  }
+
+  &__details {
+    flex: 1;
+    flex-basis: 50%;
   }
 
   &__item-title {
@@ -68,6 +75,7 @@
   &__cta-btn-group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
   }
 
@@ -117,28 +125,49 @@
   }
 }
 
-@media only screen and (min-width: $tablet-breakpoint) {
+@media only screen and (min-width: $tablet-portrait-breakpoint) {
+  .projects {
+    &__cta-btn {
+      min-width: 25rem;
+      max-width: 30rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-landscape-breakpoint) {
   .projects {
     &__block {
       flex-direction: row;
-      gap: 7%;
+      align-items: flex-start;
+      gap: 6rem;
     }
 
     &__img {
-      flex-basis: 43%;
+      flex-basis: 40rem;
     }
 
     &__details {
       text-align: start;
-      flex-basis: 50%;
     }
 
     &__tags {
       justify-content: flex-start;
     }
 
+    &__cta-btn-group {
+      justify-content: flex-start;
+    }
+
     &__cta-btn {
       min-width: 20rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) {
+  .projects {
+    &__block {
+      gap: 8rem;
     }
   }
 }

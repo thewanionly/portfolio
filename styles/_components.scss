@@ -13,39 +13,11 @@
   transition: all 0.2s;
 
   &__primary {
-    background-color: $color-secondary;
-    color: $color-white;
-
-    &:hover {
-      background-color: $color-secondary-light;
-    }
-
-    &--outline {
-      background-color: transparent;
-      border: 0.1rem solid $color-secondary;
-      color: $color-secondary;
-
-      &:hover {
-        background-color: rgba($color-secondary-light, 0.1);
-      }
-    }
-
-    &:disabled {
-      background-color: rgba($color-secondary, 0.6);
-      color: rgba($color-white, 0.8);
-
-      &:hover {
-        background-color: rgba($color-secondary, 0.6);
-      }
-    }
-  }
-
-  &__secondary {
     background-color: $color-primary;
     color: $color-white;
 
     &:hover {
-      background-color: rgba($color-primary, 0.8);
+      background-color: $color-primary-light;
     }
 
     &--outline {
@@ -54,7 +26,35 @@
       color: $color-primary;
 
       &:hover {
-        background-color: rgba($color-primary, 0.1);
+        background-color: rgba($color-primary-light, 0.1);
+      }
+    }
+
+    &:disabled {
+      background-color: rgba($color-primary, 0.6);
+      color: rgba($color-white, 0.8);
+
+      &:hover {
+        background-color: rgba($color-primary, 0.6);
+      }
+    }
+  }
+
+  &__secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+
+    &:hover {
+      background-color: rgba($color-secondary, 0.8);
+    }
+
+    &--outline {
+      background-color: transparent;
+      border: 0.1rem solid $color-secondary;
+      color: $color-secondary;
+
+      &:hover {
+        background-color: rgba($color-secondary, 0.1);
       }
     }
   }
@@ -66,11 +66,11 @@
 
     &::after {
       content: '  >';
-      color: $color-secondary;
+      color: $color-primary;
     }
 
     &:hover {
-      color: $color-secondary;
+      color: $color-primary;
     }
   }
 
@@ -100,8 +100,8 @@
     resize: none;
 
     &:focus-visible {
-      border-color: $color-secondary;
-      border: 0.1rem solid $color-secondary;
+      border-color: $color-primary;
+      border: 0.1rem solid $color-primary;
     }
   }
 }
@@ -130,7 +130,7 @@
   }
 
   &--success {
-    background-color: $color-secondary;
+    background-color: $color-primary;
   }
 
   &--error {

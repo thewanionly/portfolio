@@ -1,5 +1,5 @@
 .footer {
-  background-color: $color-primary;
+  background-color: $color-secondary;
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -60,7 +60,7 @@
 
   &__social-link {
     &:hover {
-      color: $color-secondary;
+      color: $color-primary;
     }
   }
 }

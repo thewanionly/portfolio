@@ -1,6 +1,6 @@
 .home {
   padding: 4rem 0;
-  background-color: $color-primary;
+  background-color: $color-secondary;
   color: $color-white;
   min-height: 100vh;
 
@@ -54,7 +54,7 @@
 
   &__social-link {
     &:hover {
-      color: $color-secondary;
+      color: $color-primary;
     }
   }
 }

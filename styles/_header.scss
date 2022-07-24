@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 1;
   width: 100%;
-  background-color: $color-primary;
+  background-color: $color-secondary;
   height: 8.1rem;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@
     transition: all 0.2s;
 
     &:hover {
-      color: $color-secondary;
+      color: $color-primary;
     }
   }
 }
@@ -54,7 +54,7 @@
   position: absolute;
   top: 7.5rem;
   left: 0;
-  background-color: rgba($color-primary, 0.95);
+  background-color: rgba($color-secondary, 0.95);
   padding: 8rem;
   width: 100%;
   height: calc(100vh - 7.5rem);
@@ -80,7 +80,7 @@
     .nav__toggle-icon,
     .nav__toggle-icon::before,
     .nav__toggle-icon::after {
-      background-color: $color-secondary;
+      background-color: $color-primary;
     }
 
     &.nav__toggle--close .nav__toggle-icon {

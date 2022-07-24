@@ -101,7 +101,7 @@
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
-    background-color: rgba($color-primary, 0.6);
+    background-color: rgba($color-secondary, 0.6);
     color: rgba($color-white, 0.6);
 
     display: flex;
@@ -111,7 +111,7 @@
     transition: all 0.2s;
 
     &:hover {
-      background-color: $color-primary;
+      background-color: $color-secondary;
       color: $color-white;
     }
 

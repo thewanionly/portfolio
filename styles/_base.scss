@@ -1,7 +1,8 @@
 //Colors
-$color-primary: #0e0e0e;
-$color-secondary: #d87d4a;
-$color-secondary-light: #fbaf85;
+$color-primary: #506db5;
+$color-primary-light: #3f5895;
+$color-secondary: #0e0e0e;
+
 $color-grey: #f1f1f1;
 $color-grey-dark: #cfcfcf;
 $color-white: #fff;
@@ -156,10 +157,10 @@ a {
 }
 
 .highlight {
-  color: $color-secondary;
+  color: $color-primary;
 
   &__invert {
-    color: $color-primary;
+    color: $color-secondary;
   }
 }
 
@@ -169,7 +170,7 @@ a {
   letter-spacing: 0;
   font-size: $font-size-reg;
   font-weight: $font-weight-bold;
-  color: $color-secondary;
+  color: $color-primary;
 
   &:hover {
     text-decoration: underline;
@@ -191,7 +192,7 @@ a {
     text-transform: lowercase;
 
     &--highlight {
-      color: $color-secondary;
+      color: $color-primary;
     }
   }
 }

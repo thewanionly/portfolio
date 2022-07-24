@@ -116,11 +116,11 @@
     }
 
     &--prev {
-      left: -4rem;
+      left: -2rem;
     }
 
     &--next {
-      right: -4rem;
+      right: -2rem;
     }
   }
 }
@@ -130,6 +130,16 @@
     &__cta-btn {
       min-width: 25rem;
       max-width: 30rem;
+    }
+
+    &__nav-btn {
+      &--prev {
+        left: -4rem;
+      }
+
+      &--next {
+        right: -4rem;
+      }
     }
   }
 }

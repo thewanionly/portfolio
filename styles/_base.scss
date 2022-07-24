@@ -187,12 +187,14 @@ a {
 
 .logo {
   cursor: pointer;
-  &__text {
-    color: $color-white;
-    text-transform: lowercase;
+  display: flex;
+  align-items: center;
 
-    &--highlight {
-      color: $color-primary;
+  &__img {
+    height: 2.4rem;
+
+    img {
+      height: 100%;
     }
   }
 }

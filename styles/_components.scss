@@ -169,7 +169,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-breakpoint) {
+@media only screen and (min-width: $tablet-portrait-breakpoint) {
   .toast {
     width: 37rem;
     border-radius: 0.4rem;

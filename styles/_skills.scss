@@ -45,7 +45,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-breakpoint) {
+@media only screen and (min-width: $tablet-portrait-breakpoint) {
   .skills {
     &__group {
       flex-basis: 30%;

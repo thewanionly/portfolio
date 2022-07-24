@@ -62,7 +62,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-breakpoint) {
+@media only screen and (min-width: $tablet-portrait-breakpoint) {
   .home {
     &__cta-btn {
       max-width: 35rem;

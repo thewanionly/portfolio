@@ -1,7 +1,7 @@
 .home {
   padding: 13rem 0 16rem;
-  background-color: $color-secondary;
-  color: $color-white;
+  background-color: var(--color-secondary);
+  color: var(--heading-light-color);
 
   &__container {
     display: flex;
@@ -20,14 +20,14 @@
 
     &--secondary {
       letter-spacing: 0.5rem;
-      font-size: $font-size-sm;
+      font-size: var(--font-size-sm);
 
-      color: rgba($color-white, 0.5);
+      color: var(--body-lighter-color);
     }
   }
 
   &__subtitle {
-    color: rgba($color-white, 0.75);
+    color: var(--body-light-color);
     line-height: 2.5rem;
   }
 
@@ -53,12 +53,12 @@
 
   &__social-link {
     &:hover {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-breakpoint) {
+@media only screen and (min-width: $bp-tablet-portrait) {
   .home {
     &__cta-btn {
       max-width: 35rem;

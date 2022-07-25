@@ -3,11 +3,11 @@
   max-width: 120rem;
   margin: 0 auto;
 
-  @media only screen and (min-width: $tablet-portrait-breakpoint) {
+  @media only screen and (min-width: $bp-tablet-portrait) {
     width: 80%;
   }
 
-  @media only screen and (min-width: $desktop-breakpoint) {
+  @media only screen and (min-width: $bp-desktop) {
     width: 75%;
   }
 }
@@ -18,10 +18,10 @@
 }
 
 .highlight {
-  color: $color-primary;
+  color: var(--color-primary);
 
   &__invert {
-    color: $color-secondary;
+    color: var(--color-secondary);
   }
 }
 
@@ -29,20 +29,20 @@
   text-transform: unset;
   text-decoration: unset;
   letter-spacing: 0;
-  font-size: $font-size-reg;
-  font-weight: $font-weight-bold;
-  color: $color-primary;
+  font-size: var(--font-size-reg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
 
   &:hover {
     text-decoration: underline;
   }
 
   &--black {
-    color: rgba($color-black, 0.5);
+    color: var(--body-dark-color);
   }
 
   &--white {
-    color: $color-white;
+    color: var(--body-light-color);
   }
 }
 

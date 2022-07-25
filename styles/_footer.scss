@@ -1,5 +1,5 @@
 .footer {
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     left: calc(50% - 5rem);
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     height: 0.4rem;
     width: 10rem;
   }
@@ -34,8 +34,8 @@
   }
 
   &__description {
-    color: rgba($color-white, 0.5);
-    font-weight: $font-weight-medium;
+    color: var(--body-lighter-color);
+    font-weight: var(--font-weight-medium);
     margin-bottom: 6rem;
   }
 
@@ -47,26 +47,26 @@
   }
 
   &__copyright {
-    color: rgba($color-white, 0.5);
-    font-weight: $font-weight-bold;
-    font-size: $font-size-sm;
+    color: var(--body-lighter-color);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
   }
 
   &__social-group {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    color: $color-white;
+    color: var(--icon-color);
   }
 
   &__social-link {
     &:hover {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-breakpoint) {
+@media only screen and (min-width: $bp-tablet-portrait) {
   .footer {
     text-align: start;
 
@@ -92,7 +92,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-landscape-breakpoint) {
+@media only screen and (min-width: $bp-tablet-landscape) {
   .footer {
     &__top-area {
       flex-direction: row;
@@ -101,7 +101,7 @@
   }
 }
 
-@media only screen and (min-width: $desktop-breakpoint) {
+@media only screen and (min-width: $bp-desktop) {
   .footer {
     &::before {
       left: 12.5%;

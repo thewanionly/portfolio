@@ -18,15 +18,15 @@
     min-width: 34rem;
     max-width: 50rem;
     padding: 2.5rem 2rem;
-    background-color: $color-grey;
+    background-color: var(--about-card-bg-color);
     border-radius: 0.8rem;
     text-align: center;
 
     &-title {
       letter-spacing: 0.1rem;
-      font-weight: $font-weight-bold;
+      font-weight: var(--font-weight-bold);
       margin-bottom: 3rem;
-      color: $color-primary;
+      color: var(--color-primary);
     }
 
     &-body {
@@ -45,7 +45,7 @@
     }
 
     &-description {
-      color: rgba($color-black, 0.75);
+      color: var(--body-dark-color);
       line-height: 2.5rem;
     }
   }
@@ -53,7 +53,7 @@
   &__cta {
     margin-top: 7rem;
     text-align: center;
-    color: rgba($color-black, 0.5);
+    color: var(--body-dark-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +65,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-breakpoint) {
+@media only screen and (min-width: $bp-tablet-portrait) {
   .about {
     &__card {
       flex-basis: 32%;
@@ -75,7 +75,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-landscape-breakpoint) {
+@media only screen and (min-width: $bp-tablet-landscape) {
   .about {
     &__title {
       margin-bottom: 10rem;

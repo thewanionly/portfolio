@@ -1,6 +1,6 @@
 .contact {
   padding: 8rem 0;
-  background-color: $color-grey;
+  background-color: var(--contact-section-bg-color);
   text-align: center;
 
   &__container {
@@ -15,7 +15,7 @@
     max-width: 60rem;
     margin: auto;
     margin-bottom: 6rem;
-    color: rgba($color-black, 0.5);
+    color: var(--body-dark-color);
   }
 
   &__form {
@@ -41,7 +41,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-breakpoint) {
+@media only screen and (min-width: $bp-tablet-portrait) {
   .contact {
     &__input {
       &--name,

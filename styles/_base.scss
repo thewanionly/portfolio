@@ -1,3 +1,59 @@
+:root {
+  --color-primary: #{$blue};
+  --color-primary-light: #{$blue-light};
+  --color-primary-lighter: #{rgba($blue-light, 0.6)};
+  --color-primary-lightest: #{rgba($blue-light, 0.1)};
+
+  --color-secondary: #{$dark};
+  --color-secondary-lighter: #{rgba($dark, 0.8)};
+  --color-secondary-lightest: #{rgba($dark, 0.1)};
+  --nav-menu-bg-color: #{rgba($dark, 0.95)};
+
+  --form-input-border-color: #{$grey};
+  --toast-bg-color: #{$grey};
+
+  --about-card-bg-color: #{$grey-light};
+  --contact-section-bg-color: #{$grey-light};
+
+  --body-light-bg-color: #{$white};
+  --header-divider-bg-color: #{rgba($white, 0.1)};
+  --nav-toggle-color: #{$white};
+  --nav-link-color: #{$white};
+  --heading-light-color: #{$white};
+  --nav-btn-color: #{$white};
+  --icon-color: #{$white};
+  --form-input-bg-color: #{$white};
+  --toast-color: #{$white};
+  --btn-color: #{$white};
+  --btn-disabled-color: #{rgba($white, 0.8)};
+  --nav-btn-light-color: #{rgba($white, 0.6)};
+  --body-light-color: #{rgba($white, 0.75)};
+  --body-lighter-color: #{rgba($white, 0.5)};
+
+  --body-dark-bg-color: #{$black};
+  --heading-dark-color: #{$black};
+  --tag-color: #{$black};
+  --nav-btn-bg-color: #{rgba($black, 0.6)};
+  --body-dark-color: #{rgba($black, 0.5)};
+  --toast-box-shadow-color: #{rgba($black, 0.2)};
+
+  --color-error: #{$red};
+
+  --font-family: #{$manrope};
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-reg: #{$font-size-reg};
+  --font-size-med-1: #{$font-size-med-1};
+  --font-size-med-2: #{$font-size-med-2};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-xxl: #{$font-size-xxl};
+  --font-size-xxxl: #{$font-size-xxxl};
+  --font-weight-reg: #{$font-weight-reg};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-bold: #{$font-weight-bold};
+}
+
 *,
 *::before,
 *::after {
@@ -11,11 +67,11 @@ html {
   scroll-behavior: smooth;
   font-size: 50%; //1rem = 8px 8px/16px = 50%
 
-  @media only screen and (min-width: $tablet-portrait-breakpoint) {
+  @media only screen and (min-width: $bp-tablet-portrait) {
     font-size: 56.25%; //1rem = 9px 9px/16px = 56.25%
   }
 
-  @media only screen and (min-width: $desktop-breakpoint) {
+  @media only screen and (min-width: $bp-desktop) {
     font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
   }
 }
@@ -23,8 +79,9 @@ html {
 body,
 input,
 textarea {
-  font-family: $font-family;
-  font-size: $font-size-reg;
+  font-family: var(--font-family);
+  font-size: var(--font-size-reg);
+  font-weight: var(--font-weight-reg);
 }
 
 body {
@@ -35,18 +92,18 @@ body {
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background-color: #0e0e0e;
+    background-color: var(--color-secondary);
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background-color: #506db5;
+    background-color: var(--color-primary);
     border-radius: 1rem;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background-color: #3f5895;
+    background-color: var(--color-primary-light);
   }
 }
 
@@ -66,47 +123,47 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-xxl;
+  font-size: var(--font-size-xxl);
   line-height: 4.4rem;
 
-  @media only screen and (min-width: $tablet-portrait-breakpoint) {
-    font-size: $font-size-xxxl;
+  @media only screen and (min-width: $bp-tablet-portrait) {
+    font-size: var(--font-size-xxxl);
     line-height: 5.8rem;
   }
 }
 
 h2 {
-  font-size: $font-size-xxl;
+  font-size: var(--font-size-xxl);
   line-height: 4.4rem;
 }
 
 h3 {
-  font-size: $font-size-xl;
+  font-size: var(--font-size-xl);
   line-height: 3.6rem;
 }
 
 h4 {
-  font-size: $font-size-lg;
+  font-size: var(--font-size-lg);
   line-height: 3.8rem;
 }
 
 h5 {
-  font-size: $font-size-med-2;
+  font-size: var(--font-size-med-2);
   line-height: 3.3rem;
 }
 
 h6 {
-  font-size: $font-size-med-1;
+  font-size: var(--font-size-med-1);
   line-height: 2.4rem;
 }
 
 p {
-  font-size: $font-size-reg;
-  font-weight: $font-weight-medium;
+  font-size: var(--font-size-reg);
+  font-weight: var(--font-weight-medium);
 }
 
 strong {
-  font-weight: $font-weight-bold;
+  font-weight: var(--font-weight-bold);
 }
 
 button {
@@ -126,8 +183,8 @@ ul {
 a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-bold;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.2rem;
   color: unset;
 }

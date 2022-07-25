@@ -1,16 +1,29 @@
-//Colors
-$color-primary: #506db5;
-$color-primary-dark: #3f5895;
-$color-secondary: #0e0e0e;
+/*=============================================
+=            Colors                           =
+=============================================*/
 
-$color-grey: #f1f1f1;
-$color-grey-dark: #cfcfcf;
-$color-white: #fff;
-$color-black: #000;
-$color-error: #e74c3c;
+/* Brand Colors */
+$blue: #506db5;
+$blue-light: #738ac4;
+$dark: #0e0e0e;
 
-// Typography
-$font-family: 'Manrope', sans-serif;
+/* Neutral Colors */
+$grey: #cfcfcf;
+$grey-light: #f1f1f1;
+$white: #fff;
+$black: #000;
+
+/* Utility colors */
+$red: #e74c3c;
+
+/*=============================================
+=                 Typography                  =
+=============================================*/
+
+/* Font family */
+$manrope: 'Manrope', sans-serif;
+
+/* Font sizes */
 $font-size-xs: 1.2rem;
 $font-size-sm: 1.3rem;
 $font-size-reg: 1.5rem;
@@ -21,11 +34,14 @@ $font-size-xl: 3.2rem;
 $font-size-xxl: 4rem;
 $font-size-xxxl: 5.6rem;
 
+/* Font weights */
 $font-weight-reg: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-//Breakpoints
-$tablet-portrait-breakpoint: 48em; // 768 / 16 (rem can't be used in media queries)
-$tablet-landscape-breakpoint: 64em; // 1024 / 16 (rem can't be used in media queries)
-$desktop-breakpoint: 90em; // 1440 / 16 (rem can't be used in media queries)
+/*=============================================
+=                 Breakpoints                 =
+=============================================*/
+$bp-tablet-portrait: 48em; // 768 / 16 (rem can't be used in media queries)
+$bp-tablet-landscape: 64em; // 1024 / 16 (rem can't be used in media queries)
+$bp-desktop: 90em; // 1440 / 16 (rem can't be used in media queries)

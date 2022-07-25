@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 1;
   width: 100%;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
   height: 8.1rem;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba($color-white, 0.1);
+    background-color: var(--header-divider-bg-color);
     height: 0.1rem;
     width: 100%;
   }
@@ -38,11 +38,11 @@
   }
 
   &__link {
-    color: $color-white;
+    color: var(--nav-link-color);
     transition: all 0.2s;
 
     &:hover {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }
@@ -54,7 +54,7 @@
   position: absolute;
   top: 7.5rem;
   left: 0;
-  background-color: rgba($color-secondary, 0.95);
+  background-color: var(--nav-menu-bg-color);
   padding: 8rem;
   width: 100%;
   height: calc(100vh - 7.5rem);
@@ -70,7 +70,7 @@
 
 .nav__toggle {
   cursor: pointer;
-  color: $color-white;
+  color: var(--nav-toggle-color);
   width: 2.4rem;
   padding: 1rem 0;
   overflow: hidden;
@@ -80,7 +80,7 @@
     .nav__toggle-icon,
     .nav__toggle-icon::before,
     .nav__toggle-icon::after {
-      background-color: $color-primary;
+      background-color: var(--color-primary);
     }
 
     &.nav__toggle--close .nav__toggle-icon {
@@ -96,7 +96,7 @@
   &-icon::before,
   &-icon::after {
     display: block;
-    background: $color-white;
+    background: var(--nav-toggle-color);
     content: '';
     height: 0.2rem;
     width: 2.4rem;
@@ -134,7 +134,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-breakpoint) {
+@media only screen and (min-width: $bp-tablet-portrait) {
   .header {
     &__container {
       gap: 4.2rem;
@@ -151,7 +151,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-landscape-breakpoint) {
+@media only screen and (min-width: $bp-tablet-landscape) {
   body {
     overflow: unset !important;
   }
@@ -182,7 +182,7 @@
   }
 }
 
-@media only screen and (min-width: $desktop-breakpoint) {
+@media only screen and (min-width: $bp-desktop) {
   .header {
     &::after {
       left: calc(25% / 2);

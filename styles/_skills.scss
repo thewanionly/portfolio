@@ -1,10 +1,10 @@
 .skills {
   padding: 8rem 0 13rem;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
   text-align: center;
 
   &__title {
-    color: $color-white;
+    color: var(--heading-light-color);
     margin-bottom: 8rem;
   }
 
@@ -22,7 +22,7 @@
   }
 
   &__description {
-    color: rgba($color-white, 0.75);
+    color: var(--body-light-color);
     line-height: 2.5rem;
   }
 
@@ -41,11 +41,11 @@
     align-items: center;
     gap: 1rem;
     flex-basis: 27%;
-    color: rgba($color-white, 0.75);
+    color: var(--body-light-color);
   }
 }
 
-@media only screen and (min-width: $tablet-portrait-breakpoint) {
+@media only screen and (min-width: $bp-tablet-portrait) {
   .skills {
     &__group {
       flex-basis: 30%;
@@ -55,7 +55,7 @@
   }
 }
 
-@media only screen and (min-width: $tablet-landscape-breakpoint) {
+@media only screen and (min-width: $bp-tablet-landscape) {
   .skills {
     &__title {
       margin-bottom: 10rem;

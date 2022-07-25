@@ -2,16 +2,19 @@
   background-color: var(--color-secondary);
   padding: 4rem 0;
   text-align: center;
-  position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: calc(50% - 5rem);
-    background-color: var(--color-primary);
-    height: 0.4rem;
-    width: 10rem;
+  &__container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4rem;
+      left: calc(50% - 5rem);
+      background-color: var(--color-primary);
+      height: 0.4rem;
+      width: 10rem;
+    }
   }
 
   &__top-area {
@@ -70,8 +73,10 @@
   .footer {
     text-align: start;
 
-    &::before {
-      left: 10%;
+    &__container {
+      &::before {
+        left: 0;
+      }
     }
 
     &__nav {
@@ -97,14 +102,6 @@
     &__top-area {
       flex-direction: row;
       justify-content: space-between;
-    }
-  }
-}
-
-@media only screen and (min-width: $bp-desktop) {
-  .footer {
-    &::before {
-      left: 12.5%;
     }
   }
 }

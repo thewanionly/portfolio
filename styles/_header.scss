@@ -10,22 +10,20 @@
   &__container {
     display: flex;
     align-items: center;
-    height: 100%;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -9%;
-      background-color: var(--header-divider-bg-color);
-      height: 0.1rem;
-      width: 100vw;
-    }
   }
 
   &__logo {
     margin: 0 auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--header-divider-bg-color);
+    height: 0.1rem;
+    width: 100%;
   }
 }
 
@@ -146,11 +144,9 @@
       margin: 0;
     }
 
-    &__container {
-      &::after {
-        left: 0;
-        width: 100%;
-      }
+    &::after {
+      left: 10%;
+      width: 80%;
     }
   }
 }
@@ -183,5 +179,14 @@
   .nav__menu {
     visibility: hidden;
     opacity: 0;
+  }
+}
+
+@media only screen and (min-width: $bp-desktop) {
+  .header {
+    &::after {
+      left: calc(25% / 2);
+      width: 75%;
+    }
   }
 }

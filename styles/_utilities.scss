@@ -1,0 +1,61 @@
+.container {
+  width: 85%;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $tablet-portrait-breakpoint) {
+    width: 80%;
+  }
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    width: 75%;
+  }
+}
+
+.section__title {
+  text-align: center;
+  letter-spacing: 0.15rem;
+}
+
+.highlight {
+  color: $color-primary;
+
+  &__invert {
+    color: $color-secondary;
+  }
+}
+
+.link {
+  text-transform: unset;
+  text-decoration: unset;
+  letter-spacing: 0;
+  font-size: $font-size-reg;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--black {
+    color: rgba($color-black, 0.5);
+  }
+
+  &--white {
+    color: $color-white;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    height: 2.4rem;
+
+    img {
+      height: 100%;
+    }
+  }
+}

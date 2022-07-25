@@ -1,0 +1,31 @@
+//Colors
+$color-primary: #506db5;
+$color-primary-dark: #3f5895;
+$color-secondary: #0e0e0e;
+
+$color-grey: #f1f1f1;
+$color-grey-dark: #cfcfcf;
+$color-white: #fff;
+$color-black: #000;
+$color-error: #e74c3c;
+
+// Typography
+$font-family: 'Manrope', sans-serif;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.3rem;
+$font-size-reg: 1.5rem;
+$font-size-med-1: 1.8rem;
+$font-size-med-2: 2.4rem;
+$font-size-lg: 2.8rem;
+$font-size-xl: 3.2rem;
+$font-size-xxl: 4rem;
+$font-size-xxxl: 5.6rem;
+
+$font-weight-reg: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+//Breakpoints
+$tablet-portrait-breakpoint: 48em; // 768 / 16 (rem can't be used in media queries)
+$tablet-landscape-breakpoint: 64em; // 1024 / 16 (rem can't be used in media queries)
+$desktop-breakpoint: 90em; // 1440 / 16 (rem can't be used in media queries)

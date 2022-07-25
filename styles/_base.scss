@@ -96,8 +96,13 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-xxxl;
-  line-height: 5.8rem;
+  font-size: $font-size-xxl;
+  line-height: 4.4rem;
+
+  @media only screen and (min-width: $tablet-portrait-breakpoint) {
+    font-size: $font-size-xxxl;
+    line-height: 5.8rem;
+  }
 }
 
 h2 {

@@ -1,4 +1,5 @@
 const body = document.querySelector('body')
+const headerLogo = document.querySelector('#header-logo')
 const navToggle = document.querySelector('#nav-toggle')
 const nav = document.querySelector('#nav')
 const navLinks = document.querySelectorAll('#nav-link')
@@ -42,6 +43,13 @@ navLinks.forEach((link) =>
     }
   })
 )
+
+// Close nav menu and reset body overflow when clicking the header logo
+headerLogo.addEventListener('click', () => {
+  if (nav.classList.contains('nav__menu')) {
+    toggleNavMenu()
+  }
+})
 
 // Submit action
 contactForm.addEventListener('submit', async (e) => {

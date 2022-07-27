@@ -4,14 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node-sass --include-path scss styles/main.scss build/style.css",
-    "watch": "nodemon -e scss -x npm run css"
+    "build:sass": "sass  --no-source-map src/styles:dist/styles",
+    "copy:html": "copyfiles -u 1 ./src/*.html dist",
+    "copy:js": "copyfiles -u 1 ./src/scripts/*.js dist",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* dist",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "watch:sass": "sass  --no-source-map --watch src/styles:dist/styles",
+    "watch:js": "onchange \"src/scripts/*.js\" -- npm run copy:js",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server dist --files dist",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:html copy:js copy:assets build:*",
+    "postbuild:css": "postcss dist/styles/*.css -u autoprefixer cssnano -r --no-map",
+    "postbuild:js": "uglifyjs-folder src/scripts -eo dist/scripts",
+    "postbuild": "npm-run-all postbuild:css postbuild:js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.19"
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.1.12",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.54.0",
+    "uglifyjs-folder": "^3.1.2"
   }
 }
